@@ -18,7 +18,7 @@
 AC_PREREQ([2.64])
 
 AC_INIT([XZ Utils], m4_esyscmd([/bin/sh build-aux/version.sh]),
-	[lasse.collin@tukaani.org], [xz], [http://tukaani.org/xz/])
+	[lasse.collin@tukaani.org], [xz], [https://tukaani.org/xz/])
 AC_CONFIG_SRCDIR([src/liblzma/common/common.h])
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIR([m4])
@@ -498,10 +498,10 @@ AM_CONDITIONAL([COND_SYMVERS], [test "x$enable_symbol_versions" = xyes])
 
 AC_MSG_CHECKING([if sandboxing should be used])
 AC_ARG_ENABLE([sandbox], [AS_HELP_STRING([--enable-sandbox=METHOD],
-		[Sandboxing METHOD can be `auto', `no', or `capsicum'.
-		The default is `auto' which enables sandboxing if
-		a supported sandboxing method is found.])],
-	[], [enable_sandbox=auto])
+		[This is an experimental feature.
+		Sandboxing METHOD can be `auto', `no', or `capsicum'.
+		The default is `no'.])],
+	[], [enable_sandbox=no])
 case $enable_sandbox in
 	auto)
 		AC_MSG_RESULT([maybe (autodetect)])
