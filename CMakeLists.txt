@@ -146,7 +146,7 @@ add_library(lzma
     src/liblzma/simple/simple_decoder.h
     src/liblzma/simple/simple_encoder.h
     src/liblzma/simple/simple_private.h
-    windows/config.h
+    windows/vs2017/config.h
 )
 
 target_include_directories(lzma
@@ -163,7 +163,7 @@ target_include_directories(lzma
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/src/liblzma/rangecoder>
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/common>
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/src/common>
-  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/windows>
+  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/windows/vs2017>
   INTERFACE
   $<INSTALL_INTERFACE:include>
   PUBLIC
